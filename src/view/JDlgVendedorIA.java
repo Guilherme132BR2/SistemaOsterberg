@@ -5,6 +5,8 @@
  */
 package view;
 
+import bean.UsuariosGvo;
+import bean.VendedorGvo;
 import dao.Usuarios_DAO;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -39,6 +41,9 @@ public class JDlgVendedorIA extends javax.swing.JDialog {
         UsuariosGvo usuario1 = (UsuariosGvo) jCboFkUsuarios.getSelectedItem();
         vendedorGvo.setUsuariosGvo(usuario1.getIdUsuariosGvo());
 
+        UsuariosGvo usuarios1 = (UsuariosGvo) jCboFkUsuarios.getSelectedItem();
+        vendedorGvo.setIdUsuariosGvo(usuarios1.getIdUsuariosGvo());
+
         return vendedorGvo;
     }
 
@@ -51,10 +56,11 @@ public class JDlgVendedorIA extends javax.swing.JDialog {
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         jFmtDataNasc.setText(formato.format(vendedorGvo.getDataNascGvo()));
 
-        int idUsuariosGvo = vendedorGvo.getUsuariosGvo();
-        Usuarios_DAO usuarios_DAO = new Usuarios_DAO();
-        jCboFkUsuarios.setSelectedItem((UsuariosGvo) usuarios_DAO.list(idUsuariosGvo));
+//        UsuariosGvo usuarios1 = (UsuariosGvo) jCboFkUsuarios.getSelectedItem();
+//        vendedorGvo.setIdUsuariosGvo(usuarios1.getIdUsuariosGvo());
 
+        UsuariosGvo usuariosGvo = vendedorGvo.getUsuariosGvo();
+        jCboFkUsuarios.setSelectedIndex(usuariosGvo.getIdUsuariosGvo());
     }
 
     /**

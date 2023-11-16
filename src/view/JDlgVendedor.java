@@ -5,6 +5,7 @@
  */
 package view;
 
+import Controles.VendedorControle;
 import bean.VendedorGvo;
 import dao.Vendedor_DAO;
 import java.util.List;
