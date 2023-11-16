@@ -11,7 +11,7 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  *
- * @author carlo
+ * @author Guilherme132BR
  */
 public class VendedorControle extends AbstractTableModel {
 
@@ -62,10 +62,7 @@ public class VendedorControle extends AbstractTableModel {
             return "nome";
         }
         if (column == 2) {
-            return "apelido";
-        }
-        if (column == 3) {
-            return "cpf";
+            return "CPF";
         }
 
         return "";

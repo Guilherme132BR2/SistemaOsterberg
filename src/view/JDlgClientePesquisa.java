@@ -5,6 +5,7 @@
  */
 package view;
 
+import Controles.ClienteControle;
 import bean.ClienteGvo;
 import dao.Cliente_DAO;
 import dao.Vendedor_DAO;

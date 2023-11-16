@@ -16,7 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "produtos_gvo",
-         catalog = "guilherme_osterberg2"
+        catalog = "guilherme_osterberg2"
 )
 public class ProdutosGvo implements java.io.Serializable {
 
@@ -25,7 +25,6 @@ public class ProdutosGvo implements java.io.Serializable {
     private Double precoGvo;
     private String estoqueGvo;
     private String plataformaGvo;
-    private Set comprasprodutoGvos = new HashSet(0);
 
     public ProdutosGvo() {
     }
@@ -44,7 +43,6 @@ public class ProdutosGvo implements java.io.Serializable {
         this.precoGvo = precoGvo;
         this.estoqueGvo = estoqueGvo;
         this.plataformaGvo = plataformaGvo;
-        this.comprasprodutoGvos = comprasprodutoGvos;
     }
 
     @Id
@@ -92,15 +90,6 @@ public class ProdutosGvo implements java.io.Serializable {
 
     public void setPlataformaGvo(String plataformaGvo) {
         this.plataformaGvo = plataformaGvo;
-    }
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "produtosGvo")
-    public Set getComprasprodutoGvos() {
-        return this.comprasprodutoGvos;
-    }
-
-    public void setComprasprodutoGvos(Set comprasprodutoGvos) {
-        this.comprasprodutoGvos = comprasprodutoGvos;
     }
 
 }

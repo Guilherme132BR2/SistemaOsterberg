@@ -8,8 +8,10 @@ package view;
 import bean.UsuariosGvo;
 import bean.VendedorGvo;
 import dao.Usuarios_DAO;
+import dao.Vendedor_DAO;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import tools.Util;
 
 /**
  *
@@ -38,11 +40,11 @@ public class JDlgVendedorIA extends javax.swing.JDialog {
         } catch (ParseException ex) {
             System.out.println("Erro" + ex.getMessage());
         }
-        UsuariosGvo usuario1 = (UsuariosGvo) jCboFkUsuarios.getSelectedItem();
-        vendedorGvo.setUsuariosGvo(usuario1.getIdUsuariosGvo());
-
-        UsuariosGvo usuarios1 = (UsuariosGvo) jCboFkUsuarios.getSelectedItem();
-        vendedorGvo.setIdUsuariosGvo(usuarios1.getIdUsuariosGvo());
+//        UsuariosGvo usuario1 = (UsuariosGvo) jCboFkUsuarios.getSelectedItem();
+//        vendedorGvo.setUsuariosGvo(usuario1.getIdUsuariosGvo());
+//
+//        UsuariosGvo usuarios1 = (UsuariosGvo) jCboFkUsuarios.getSelectedItem();
+//        vendedorGvo.setIdUsuariosGvo(usuarios1.getIdUsuariosGvo());
 
         return vendedorGvo;
     }
@@ -81,7 +83,7 @@ public class JDlgVendedorIA extends javax.swing.JDialog {
         jFmtDataNasc = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jCboFkUsuarios = new javax.swing.JComboBox<Usuarios>();
+        jCboFkUsuarios = new javax.swing.JComboBox<UsuariosGvo>();
         jLabel7 = new javax.swing.JLabel();
         jFmtIdVendedor = new javax.swing.JFormattedTextField();
         jPanel1 = new javax.swing.JPanel();
@@ -280,7 +282,7 @@ public class JDlgVendedorIA extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnCancelar;
     private javax.swing.JButton jBtnOk;
-    private javax.swing.JComboBox<Usuarios> jCboFkUsuarios;
+    private javax.swing.JComboBox<UsuariosGvo> jCboFkUsuarios;
     private javax.swing.JFormattedTextField jFmtCPF;
     private javax.swing.JFormattedTextField jFmtDataNasc;
     private javax.swing.JFormattedTextField jFmtGenero;

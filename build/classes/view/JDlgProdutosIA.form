@@ -24,22 +24,22 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jTxtNome" alignment="0" pref="100" max="32767" attributes="0"/>
                   <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jFmtPreco" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jFmtIdProdutos" max="32767" attributes="0"/>
+                  <Component id="jFmtIdProdutos" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCboPlataforma" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  <Component id="jChbEstoque" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCboPlataforma" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jChbEstoque" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -110,19 +110,9 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="ID do Produto"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nome do Produto"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="jTxtNome">
+    <Component class="javax.swing.JFormattedTextField" name="jFmtPreco">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTxtNomeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFmtPrecoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
@@ -130,14 +120,27 @@
         <Property name="text" type="java.lang.String" value="Pre&#xe7;o do produto"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JFormattedTextField" name="jFmtPreco">
+    <Component class="javax.swing.JTextField" name="jTxtNome">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFmtPrecoActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTxtNomeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Plataforma"/>
+        <Property name="text" type="java.lang.String" value="Nome do Produto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jChbEstoque">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sim"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jChbEstoqueActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Possui estoque?"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="jCboPlataforma">
@@ -161,20 +164,17 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Possui estoque?"/>
+        <Property name="text" type="java.lang.String" value="Plataforma"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JCheckBox" name="jChbEstoque">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sim"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jChbEstoqueActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="jFmtIdProdutos">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ID do Produto"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
