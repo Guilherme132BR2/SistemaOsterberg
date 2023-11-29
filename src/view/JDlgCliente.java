@@ -34,7 +34,7 @@ public class JDlgCliente extends javax.swing.JDialog {
         super(parent, modal);
 
         initComponents();
-        Util.habilitar(false, jFmtIdCliente, jTxtNome, jTxtSobrenome, jFmtCPF, jTxtDesconto, jTxtCidade, jTxtEndereco, jTxtPais, jTxtBairro, jBtnCancelar, jBtnConfirmar, jBtnExcluir);
+        Util.habilitar(false, jFmtIdCliente, jTxtNome, jTxtSobrenome, jFmtCPF, jTxtDesconto, jTxtCidade, jTxtEndereco, jTxtPais, jTxtBairro, jBtnCancelar, jBtnConfirmar, jBtnExcluir, jFmtCelular, jFmtTelefone);
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnPesquisar);
         setLocationRelativeTo(null);
         setTitle("Cliente");
@@ -63,6 +63,7 @@ public class JDlgCliente extends javax.swing.JDialog {
         clienteGvo.setTelefoneGvo(jFmtTelefone.getText());
         clienteGvo.setCelularGvo(jFmtCelular.getText());
         clienteGvo.setDescontoGvo(jTxtDesconto.getText());
+//      clienteGvo.setUsuariosGvo(jCboFkUsuarios.getSelectedItem());
         //FK DE USUARIOS AQUI POR FAVOR
 
         return clienteGvo;
@@ -81,6 +82,7 @@ public class JDlgCliente extends javax.swing.JDialog {
         jTxtDesconto.setText(clienteGvo.getDescontoGvo());
         jFmtCelular.setText(clienteGvo.getCelularGvo());
         jFmtTelefone.setText(clienteGvo.getTelefoneGvo());
+        jCboFkUsuarios.setSelectedItem(clienteGvo.getUsuariosGvo());
         //FK DE USUARIOS AQUI POR FAVOR
 
     }

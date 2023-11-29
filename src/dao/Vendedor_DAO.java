@@ -54,10 +54,10 @@ public class Vendedor_DAO extends DAO_Abstract{
     @Override
     public List listAll() {
         session.beginTransaction();
-        Criteria criteria = session.createCriteria(Vendedor_DAO.class);
+        Criteria criteria = session.createCriteria(VendedorGvo.class);
         List lista = criteria.list();
         session.getTransaction().commit();
-        return(ArrayList) lista;
+        return (ArrayList) lista;
     }
 
 }

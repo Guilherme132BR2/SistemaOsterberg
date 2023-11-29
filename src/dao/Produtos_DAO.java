@@ -54,7 +54,7 @@ public class Produtos_DAO extends DAO_Abstract{
     @Override
     public List listAll() {
         session.beginTransaction();
-        Criteria criteria = session.createCriteria(Produtos_DAO.class);
+        Criteria criteria = session.createCriteria(ProdutosGvo.class);
         List lista = criteria.list();
         session.getTransaction().commit();
         return(ArrayList) lista;
