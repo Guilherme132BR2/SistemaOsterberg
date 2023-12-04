@@ -63,7 +63,7 @@ public class JDlgCliente extends javax.swing.JDialog {
         clienteGvo.setTelefoneGvo(jFmtTelefone.getText());
         clienteGvo.setCelularGvo(jFmtCelular.getText());
         clienteGvo.setDescontoGvo(jTxtDesconto.getText());
-//      clienteGvo.setUsuariosGvo(jCboFkUsuarios.getSelectedItem());
+        clienteGvo.setUsuariosGvo((UsuariosGvo) jCboFkUsuarios.getSelectedItem());
         //FK DE USUARIOS AQUI POR FAVOR
 
         return clienteGvo;
@@ -83,7 +83,6 @@ public class JDlgCliente extends javax.swing.JDialog {
         jFmtCelular.setText(clienteGvo.getCelularGvo());
         jFmtTelefone.setText(clienteGvo.getTelefoneGvo());
         jCboFkUsuarios.setSelectedItem(clienteGvo.getUsuariosGvo());
-        //FK DE USUARIOS AQUI POR FAVOR
 
     }
 

@@ -54,7 +54,7 @@ public class Cliente_DAO extends DAO_Abstract{
     @Override
     public List listAll() {
         session.beginTransaction();
-        Criteria criteria = session.createCriteria(Cliente_DAO.class);
+        Criteria criteria = session.createCriteria(ClienteGvo.class);
         List lista = criteria.list();
         session.getTransaction().commit();
         return(ArrayList) lista;

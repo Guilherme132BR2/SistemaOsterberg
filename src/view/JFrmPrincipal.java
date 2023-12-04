@@ -16,6 +16,7 @@ public class JFrmPrincipal extends javax.swing.JFrame {
      */
     public JFrmPrincipal() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -36,7 +37,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMnuSair = new javax.swing.JMenuItem();
         jMnuMovimentos = new javax.swing.JMenu();
-        jMnuVendas = new javax.swing.JMenuItem();
         jMnuCompras = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -112,16 +112,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jMnuMovimentos.setMnemonic('M');
         jMnuMovimentos.setText("Movimentos");
 
-        jMnuVendas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMnuVendas.setMnemonic('V');
-        jMnuVendas.setText("Vendas");
-        jMnuVendas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMnuVendasActionPerformed(evt);
-            }
-        });
-        jMnuMovimentos.add(jMnuVendas);
-
         jMnuCompras.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMnuCompras.setMnemonic('C');
         jMnuCompras.setText("Compras");
@@ -140,11 +130,11 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 498, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
 
         pack();
@@ -184,12 +174,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
     private void jMnuPrincipalMenuKeyPressed(javax.swing.event.MenuKeyEvent evt) {//GEN-FIRST:event_jMnuPrincipalMenuKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMnuPrincipalMenuKeyPressed
-
-    private void jMnuVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuVendasActionPerformed
-        // TODO add your handling code here:
-        JDlgVendas jDlgVendas = new JDlgVendas(null, true);
-        jDlgVendas.setVisible(true);
-    }//GEN-LAST:event_jMnuVendasActionPerformed
 
     private void jMnuComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuComprasActionPerformed
         // TODO add your handling code here:
@@ -247,7 +231,6 @@ public class JFrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMnuPrincipal;
     private javax.swing.JMenuItem jMnuSair;
     private javax.swing.JMenuItem jMnuUsuarios;
-    private javax.swing.JMenuItem jMnuVendas;
     private javax.swing.JMenuItem jMnuVendedor;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
